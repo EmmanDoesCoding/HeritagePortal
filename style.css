@@ -711,7 +711,7 @@ body::before {
   border: 1px solid rgba(201,149,42,0.5);
   vertical-align: top;
   line-height: 1.5;
-  color: var(--ink);
+  color: var(--crimson);
 }
 
 .compare-table td.label-cell {
