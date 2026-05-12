@@ -439,9 +439,14 @@ function showComparison(idA, idB) {
       <tbody>
         ${rows.map(r => `
           <tr>
-            <td class="label-cell">${r.label}</td>
-            <td>${r.va}</td>
-            <td>${r.vb}</td>
+            <td class="label-cell"><strong>${r.label}</strong></td>
+            <td class="${r.label === 'Political Landmark' ? 'red-text' : ''}">
+  ${r.va}
+</td>
+
+<td class="${r.label === 'Political Landmark' ? 'red-text' : ''}">
+  ${r.vb}
+</td>
           </tr>
         `).join('')}
       </tbody>
