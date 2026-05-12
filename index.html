@@ -4,279 +4,446 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ASEAN Literature — Cultural Heritage Portal</title>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="site-wrapper">
+  <!-- ══════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-ornament">✦ Cambodia · Laos · Indonesia · Singapore · Malaysia ✦</div>
+    <h1>ASEAN Literature</h1>
+    <div class="hero-sub">Voices of the Southeast — Stories, Traditions &amp; Cultures</div>
+    <div class="ornate-divider">❧ ✦ ❧</div>
+    <p class="hero-credit">A Cultural Heritage Portal for Academic Study</p>
+  </header>
 
   <!-- ══════════════════════════════════════════
-       SIDEBAR
+       NAVIGATION
   ══════════════════════════════════════════ -->
-  <aside class="sidebar">
-    <div class="logo-block">
-      <div class="logo-eyebrow">Heritage Portal</div>
-      <div class="logo-title">ASEAN<br>Literature</div>
-      <div class="logo-sub">Voices of the Southeast</div>
-    </div>
-
-    <nav class="nav-list">
-      <div class="nav-item active" onclick="showPage('home')">
-        <span class="nav-num">01</span>
-        <span class="nav-label">Home</span>
-        <span class="nav-dot"></span>
-      </div>
-      <div class="nav-item" onclick="showPage('literary')">
-        <span class="nav-num">02</span>
-        <span class="nav-label">Literary Analysis</span>
-        <span class="nav-dot"></span>
-      </div>
-      <div class="nav-item" onclick="showPage('cultural')">
-        <span class="nav-num">03</span>
-        <span class="nav-label">Cultural Traditions</span>
-        <span class="nav-dot"></span>
-      </div>
-      <div class="nav-item" onclick="showPage('religious')">
-        <span class="nav-num">04</span>
-        <span class="nav-label">Religious Influences</span>
-        <span class="nav-dot"></span>
-      </div>
-      <div class="nav-item" onclick="showPage('social')">
-        <span class="nav-num">05</span>
-        <span class="nav-label">Social Practices</span>
-        <span class="nav-dot"></span>
-      </div>
-      <div class="nav-item" onclick="showPage('thennow')">
-        <span class="nav-num">06</span>
-        <span class="nav-label">Then vs Now</span>
-        <span class="nav-dot"></span>
-      </div>
-    </nav>
-
-    <div class="sidebar-footer">
-      <div class="sidebar-nations">
-        Cambodia<br>Laos<br>Indonesia<br>Singapore<br>Malaysia
-      </div>
-    </div>
-  </aside>
+  <nav class="main-nav" id="mainNav">
+    <button class="nav-btn active"  onclick="showPage('home')">⌂ Home</button>
+    <button class="nav-btn"         onclick="showPage('literary')">📜 Literary Analysis</button>
+    <button class="nav-btn"         onclick="showPage('cultural')">🎭 Cultural Traditions</button>
+    <button class="nav-btn"         onclick="showPage('religious')">🕌 Religious Influences</button>
+    <button class="nav-btn"         onclick="showPage('social')">🫶 Social Practices</button>
+    <button class="nav-btn"         onclick="showPage('thennow')">⏳ Then vs Now</button>
+  </nav>
 
   <!-- ══════════════════════════════════════════
-       MAIN CONTENT
+       HOME PAGE
   ══════════════════════════════════════════ -->
-  <div class="main-content">
-
-    <!-- Mobile nav (visible below 1024px) -->
-    <div class="mobile-nav">
-      <button class="mobile-nav-btn active"  onclick="showPage('home')">Home</button>
-      <button class="mobile-nav-btn"         onclick="showPage('literary')">Literary</button>
-      <button class="mobile-nav-btn"         onclick="showPage('cultural')">Cultural</button>
-      <button class="mobile-nav-btn"         onclick="showPage('religious')">Religious</button>
-      <button class="mobile-nav-btn"         onclick="showPage('social')">Social</button>
-      <button class="mobile-nav-btn"         onclick="showPage('thennow')">Then/Now</button>
+  <main id="home" class="page active">
+    <div class="flags-intro">
+      "The diversity of ASEAN's peoples is matched only by the richness of their stories.<br>
+      Click a flag to explore — or drag one flag onto another to compare their cultures."
     </div>
 
-    <!-- ══════════════════════════════════════════
-         HOME
-    ══════════════════════════════════════════ -->
-    <section id="home" class="page active">
-      <div class="home-hero">
-        <div class="hero-overline">Southeast Asia · Academic Study Resource · Est. 2025</div>
-        <div class="hero-headline">
-          <span>ASEAN</span>
-          Literature
-          <em>Voices of the Southeast — Stories, Traditions &amp; Cultures</em>
-        </div>
-        <div class="hero-split">
-          <p class="hero-desc">Five nations. Five centuries of storytelling. A cultural heritage portal exploring the oral traditions, colonial encounters, spiritual devotion, and modern voices of Cambodia, Laos, Indonesia, Singapore, and Malaysia.</p>
-          <div class="hero-stats">
-            <div class="stat-box"><div class="stat-num">5</div><div class="stat-label">Nations</div></div>
-            <div class="stat-box"><div class="stat-num">700+</div><div class="stat-label">Languages</div></div>
-            <div class="stat-box"><div class="stat-num">17K</div><div class="stat-label">Islands</div></div>
-            <div class="stat-box"><div class="stat-num">1,000</div><div class="stat-label">Yrs of Story</div></div>
-          </div>
-        </div>
+    <div style="max-width:1100px; margin:0 auto;">
+      <div class="drag-hint">
+        🏳 Drag any flag &nbsp;·&nbsp; Drop onto another flag &nbsp;·&nbsp; See a Cultural Comparison ✦
       </div>
-
-      <div class="home-drag-hint">⟡ Drag any flag · Drop onto another flag · See a Cultural Comparison</div>
-
-      <div class="flags-bento" id="flagsGrid"></div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         COUNTRY PAGE  (content built by JS)
-    ══════════════════════════════════════════ -->
-    <section id="countryPage" class="page">
-      <button class="back-btn" onclick="showPage('home')">Back to All Countries</button>
-      <div id="countryContent"></div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         LITERARY ANALYSIS
-    ══════════════════════════════════════════ -->
-    <section id="literary" class="page">
-      <div class="page-masthead">
-        <div class="masthead-number">02</div>
-        <div class="masthead-text">
-          <div class="section-tag">Academic Analysis</div>
-          <h2>Literary Analysis</h2>
-          <p>Themes, forms, and voices across Southeast Asia — from ancient oral epics to contemporary diaspora writing.</p>
-        </div>
+      <div class="flags-grid" id="flagsGrid">
+        <!-- Flags injected by main.js → renderFlags() -->
       </div>
-      <div class="mag-grid" id="literary-cards"></div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         CULTURAL TRADITIONS
-    ══════════════════════════════════════════ -->
-    <section id="cultural" class="page">
-      <div class="page-masthead">
-        <div class="masthead-number">03</div>
-        <div class="masthead-text">
-          <div class="section-tag">Living Arts</div>
-          <h2>Cultural Traditions</h2>
-          <p>From shadow theatre to silk weaving — the performing and visual arts of Southeast Asia as living bridges between the mortal world and the divine.</p>
-        </div>
-      </div>
-      <div class="mag-grid" id="cultural-cards"></div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         RELIGIOUS INFLUENCES
-    ══════════════════════════════════════════ -->
-    <section id="religious" class="page">
-      <div class="page-masthead">
-        <div class="masthead-number">04</div>
-        <div class="masthead-text">
-          <div class="section-tag">Spiritual Landscape</div>
-          <h2>Religious Influences</h2>
-          <p>Buddhism, Islam, Hinduism, and animism — the layered spiritual world that shaped every ASEAN literary tradition.</p>
-        </div>
-      </div>
-      <div class="mag-grid" id="religious-cards"></div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         SOCIAL PRACTICES
-    ══════════════════════════════════════════ -->
-    <section id="social" class="page">
-      <div class="page-masthead">
-        <div class="masthead-number">05</div>
-        <div class="masthead-text">
-          <div class="section-tag">Society &amp; Community</div>
-          <h2>Social Practices</h2>
-          <p>Kinship, hierarchy, and community — the deeply embedded social codes of Southeast Asian life and their reflection in literature.</p>
-        </div>
-      </div>
-      <div class="mag-grid" id="social-cards"></div>
-    </section>
-
-    <!-- ══════════════════════════════════════════
-         THEN VS NOW
-    ══════════════════════════════════════════ -->
-    <section id="thennow" class="page">
-      <div class="page-masthead">
-        <div class="masthead-number">06</div>
-        <div class="masthead-text">
-          <div class="section-tag">Cultural Evolution</div>
-          <h2>Then vs Now</h2>
-          <p>How modernization has transformed ASEAN life &amp; literature — ancient values finding new expression in digital, urban, and global contexts.</p>
-        </div>
-      </div>
-
-      <div class="thennow-strips">
-        <div class="tn-row">
-          <div class="tn-cell">
-            <div class="tn-era past">📜 Then</div>
-            <div class="tn-headline">Traditional Storytelling</div>
-            <div class="tn-body">Stories were told by griots, monks, and village elders. Knowledge was preserved in memory, palm-leaf manuscripts, and the living voices of professional bards.</div>
-          </div>
-          <div class="tn-cell">
-            <div class="tn-era present">💻 Now</div>
-            <div class="tn-headline">Digital Narratives</div>
-            <div class="tn-body">ASEAN authors publish to global audiences via social media and international publishers. Indonesian and Malaysian digital fiction platforms reach millions of readers.</div>
-          </div>
-        </div>
-        <div class="tn-row">
-          <div class="tn-cell">
-            <div class="tn-era past">🎭 Then</div>
-            <div class="tn-headline">Classical Performance</div>
-            <div class="tn-body">Royal courts maintained troupes of classical dancers, shadow puppeteers, and musicians. Performances were ritual acts — connecting mortal communities to divine realms.</div>
-          </div>
-          <div class="tn-cell">
-            <div class="tn-era present">🎬 Now</div>
-            <div class="tn-headline">Film &amp; Pop Culture</div>
-            <div class="tn-body">Indonesian horror cinema, Malaysian webtoons, Cambodian documentary film — ASEAN creative industries are growing forces. Traditional stories are reimagined through anime and streaming platforms.</div>
-          </div>
-        </div>
-        <div class="tn-row">
-          <div class="tn-cell">
-            <div class="tn-era past">🌿 Then</div>
-            <div class="tn-headline">Agricultural Communities</div>
-            <div class="tn-body">Villages were organized around the rice cycle. Planting and harvest songs, rain prayers, and fertility rituals shaped the literary and musical calendar from the Mekong Delta to the Malay Peninsula.</div>
-          </div>
-          <div class="tn-cell">
-            <div class="tn-era present">🏙️ Now</div>
-            <div class="tn-headline">Urban Migration &amp; Identity</div>
-            <div class="tn-body">Rapid urbanization has created a "third culture" generation in Kuala Lumpur, Jakarta, Singapore, and Phnom Penh. Literature increasingly explores the anxiety of belonging and cultural loss.</div>
-          </div>
-        </div>
-        <div class="tn-row">
-          <div class="tn-cell">
-            <div class="tn-era past">📖 Then</div>
-            <div class="tn-headline">Manuscripts &amp; Colonial Print</div>
-            <div class="tn-body">Before mass literacy, literature lived in palm-leaf manuscripts, bamboo scrolls, and stone temple inscriptions. Colonial presses democratized reading but often in foreign languages.</div>
-          </div>
-          <div class="tn-cell">
-            <div class="tn-era present">📱 Now</div>
-            <div class="tn-headline">Social Media Literature</div>
-            <div class="tn-body">Instagram poetry, Twitter fiction, and TikTok storytelling have created new generations of writers — often code-switching between English and vernacular languages in a single post.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="site-footer">
-      <div class="footer-logo">ASEAN Literature</div>
-      <div class="footer-meta">Cultural Heritage Portal · Academic Study Resource · Cambodia · Laos · Indonesia · Singapore · Malaysia</div>
-    </footer>
-
-  </div><!-- /.main-content -->
-</div><!-- /.site-wrapper -->
-
-<!-- ══════════════════════════════════════════
-     COMPARE MODAL
-══════════════════════════════════════════ -->
-<div id="compareModal" class="compare-overlay">
-  <div class="compare-panel">
-    <div class="compare-head">
-      <h3>Cultural Comparison</h3>
-      <button class="generic-close" onclick="closeCompare()">✕</button>
     </div>
-    <div class="compare-scroll" id="compareBody"></div>
+  </main>
+
+  <!-- ══════════════════════════════════════════
+       COUNTRY PAGE  (content injected by JS)
+  ══════════════════════════════════════════ -->
+  <section id="countryPage" class="page">
+    <button class="back-btn" onclick="showPage('home')">← Back to All Countries</button>
+    <div id="countryContent"></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       LITERARY ANALYSIS PAGE
+  ══════════════════════════════════════════ -->
+  <section id="literary" class="page">
+    <div style="max-width:1100px; margin:2rem auto;">
+      <div class="parchment">
+        <span class="corner-ornament tl">❧</span>
+        <span class="corner-ornament tr">❧</span>
+        <span class="corner-ornament bl">❧</span>
+        <span class="corner-ornament br">❧</span>
+        <div class="parchment-inner">
+          <h2 class="section-title">Literary Analysis</h2>
+          <p class="section-subtitle">Themes, Forms, and Voices Across Southeast Asia</p>
+          <div class="ornate-divider">❦</div>
+          <p class="topic-intro">ASEAN literature is a vast tapestry woven from oral traditions, colonial encounters, spiritual devotion, and modern resistance — each nation speaking in a distinct literary voice shaped by centuries of history.</p>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&q=60"
+            alt="Oral Tradition"
+            onerror="this.src='https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Theme</span>
+            <h4>Oral Tradition &amp; Epic Poetry</h4>
+            <p>From the Lao Sinxay to the Malay Hikayat, oral epics form the bedrock of ASEAN storytelling — passing wisdom across generations through rhythm, verse, and the living voice of the storyteller.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400&q=60"
+            alt="Colonial Literature"
+            onerror="this.src='https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Historical Period</span>
+            <h4>Colonial &amp; Resistance Literature</h4>
+            <p>Under Dutch, British, and French rule, writers became revolutionaries. Pramoedya Ananta Toer's Buru Quartet, written in imprisonment, stands as a monument of Southeast Asian literary resistance.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1517770413964-df8ca61194a6?w=400&q=60"
+            alt="Modern Literature"
+            onerror="this.src='https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Modern Era</span>
+            <h4>Contemporary &amp; Diaspora Writing</h4>
+            <p>Modern ASEAN authors navigate identity, urbanization, and globalization — writing in Malay, Indonesian, Khmer, Lao, English, and more, reaching global audiences while rooted in local soil.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=60"
+            alt="Mythology"
+            onerror="this.src='https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Genre</span>
+            <h4>Mythology &amp; Folklore</h4>
+            <p>Folktales involving spirits (phi, neak ta, diwatas) reveal how Southeast Asians understood the cosmos — blending animism, Hinduism, Buddhism, and Islam into deeply layered mythologies.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=400&q=60"
+            alt="Poetry"
+            onerror="this.src='https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Form</span>
+            <h4>Poetic Forms: Pantun, Kavi &amp; More</h4>
+            <p>The Malay pantun, Javanese macapat, Khmer court verse — each tradition developed sophisticated poetic forms encoding philosophy, romance, and moral teaching within strict formal constraints.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&q=60"
+            alt="Themes"
+            onerror="this.src='https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Literary Themes</span>
+            <h4>Universal Themes in ASEAN Literature</h4>
+            <p>Loyalty to kin, the tension between duty and desire, humanity's relationship with nature, and spiritual transcendence — these themes recur across all five nations, speaking a shared human language.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CULTURAL TRADITIONS PAGE
+  ══════════════════════════════════════════ -->
+  <section id="cultural" class="page">
+    <div style="max-width:1100px; margin:2rem auto;">
+      <div class="parchment">
+        <span class="corner-ornament tl">❧</span><span class="corner-ornament tr">❧</span>
+        <span class="corner-ornament bl">❧</span><span class="corner-ornament br">❧</span>
+        <div class="parchment-inner">
+          <h2 class="section-title">Cultural Traditions</h2>
+          <p class="section-subtitle">Ceremonies, Arts, and Rituals of Southeast Asia</p>
+          <div class="ornate-divider">❦</div>
+          <p class="topic-intro">From the celestial Apsara dances of Cambodia to the shadow puppet theatres of Indonesia and Malaysia, each art form embodies centuries of spiritual meaning and communal identity.</p>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?w=400&q=60"
+            alt="Dance"
+            onerror="this.src='https://images.unsplash.com/photo-1547592166-23ac45744acd?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Performing Arts</span>
+            <h4>Classical Dance &amp; Theatre</h4>
+            <p>The Khmer Apsara dance, Javanese wayang kulit shadow puppetry, Malay mak yong dance-drama, and Lao Lam Luang sung theatre — classical performance arts that narrate mythological stories through gesture, music, and costume.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=60"
+            alt="Food Culture"
+            onerror="this.src='https://images.unsplash.com/photo-1476224203421-9ac39bcb3327?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Culinary Tradition</span>
+            <h4>Food as Cultural Language</h4>
+            <p>From Indonesian kenduri communal feasts to Malaysian Hari Raya open houses, Cambodian amok ceremonies, and Lao baci blessing rituals, communal food traditions express hospitality, spirituality, and social belonging.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1464808322410-1a934aab61e5?w=400&q=60"
+            alt="Batik"
+            onerror="this.src='https://images.unsplash.com/photo-1503455637927-730bce583c0?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Textile Arts</span>
+            <h4>Weaving, Batik &amp; Traditional Textiles</h4>
+            <p>Indonesian batik (UNESCO-recognized), Malaysian songket brocade, Cambodian silk ikat, and Lao sinh skirt weaving — traditional textiles encode regional identity, social status, and spiritual meaning in every thread and pattern.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1587467512961-120760940315?w=400&q=60"
+            alt="Festivals"
+            onerror="this.src='https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Festivals</span>
+            <h4>Seasonal &amp; New Year Celebrations</h4>
+            <p>Khmer New Year (Chaul Chnam Thmey), Lao Boun Pi Mai, Indonesian Eid ul-Fitr, Singapore's multicultural festive calendar, and Malaysian Hari Raya — seasonal and religious festivals mark the year and reinforce communal bonds.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       RELIGIOUS INFLUENCES PAGE
+  ══════════════════════════════════════════ -->
+  <section id="religious" class="page">
+    <div style="max-width:1100px; margin:2rem auto;">
+      <div class="parchment">
+        <span class="corner-ornament tl">❧</span><span class="corner-ornament tr">❧</span>
+        <span class="corner-ornament bl">❧</span><span class="corner-ornament br">❧</span>
+        <div class="parchment-inner">
+          <h2 class="section-title">Religious Influences</h2>
+          <p class="section-subtitle">How Faith Shaped Literature, Art &amp; Society</p>
+          <div class="ornate-divider">❦</div>
+          <p class="topic-intro">No force has shaped ASEAN's literary and cultural landscape more profoundly than religion — animism, Hinduism, Buddhism, and Islam each leaving indelible marks on the region's stories, values, and worldview.</p>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=400&q=60"
+            alt="Hinduism"
+            onerror="this.src='https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Hinduism</span>
+            <h4>Hindu-Buddhist Heritage</h4>
+            <p>The Ramayana and Mahabharata spread across ASEAN, becoming the Khmer Reamker, the Javanese Ramayana Kakawin, and the Malay Hikayat. Angkor Wat and Prambanan temple complexes testify to this deep and magnificent spiritual heritage.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=400&q=60"
+            alt="Buddhism"
+            onerror="this.src='https://images.unsplash.com/photo-1504198266287-1659872e6590?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Buddhism</span>
+            <h4>Theravada Buddhism</h4>
+            <p>Theravada Buddhism dominates Cambodia and Laos — inspiring the Jataka birth tales, temple mural painting traditions, and a monastic literary tradition preserved in palm-leaf manuscripts across thousands of monastery libraries.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=400&q=60"
+            alt="Islam"
+            onerror="this.src='https://images.unsplash.com/photo-1566475955657-0d9f2c4f5c1e?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Islam</span>
+            <h4>Islamic Literary Tradition</h4>
+            <p>Islam arrived through Arab and Indian traders, transforming Malay, Javanese, and Singaporean Malay literature. The Hikayat literary form, syair poetry, and Islamic manuscript tradition reflect values that shaped literature across Malaysia and Indonesia.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&q=60"
+            alt="Animism"
+            onerror="this.src='https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Animism</span>
+            <h4>Indigenous Animist Traditions</h4>
+            <p>Beneath the world religions lies a substrate of animism — belief in nature spirits (neak ta, phi, hantu) that permeates folklore, healing rituals, rice-planting ceremonies, and indigenous literature across all five nations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       SOCIAL PRACTICES PAGE
+  ══════════════════════════════════════════ -->
+  <section id="social" class="page">
+    <div style="max-width:1100px; margin:2rem auto;">
+      <div class="parchment">
+        <span class="corner-ornament tl">❧</span><span class="corner-ornament tr">❧</span>
+        <span class="corner-ornament bl">❧</span><span class="corner-ornament br">❧</span>
+        <div class="parchment-inner">
+          <h2 class="section-title">Social Practices</h2>
+          <p class="section-subtitle">Kinship, Hierarchy &amp; Community in ASEAN Life</p>
+          <div class="ornate-divider">❦</div>
+          <p class="topic-intro">Southeast Asian societies are bound by deeply embedded social codes — from Indonesian gotong royong to Malay adat and Khmer concepts of status and merit — values that profoundly shape literature and cultural expression.</p>
+        </div>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&q=60"
+            alt="Family"
+            onerror="this.src='https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Family Structure</span>
+            <h4>Extended Family &amp; Kinship Networks</h4>
+            <p>The extended family is the primary social unit across all five nations. Indonesian gotong royong, Malay muhibbah, and Cambodian clan loyalty all emphasize the collective over the individual — reflected powerfully in their literatures.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1531107369768-2e6b66e45b53?w=400&q=60"
+            alt="Rites of Passage"
+            onerror="this.src='https://images.unsplash.com/photo-1537633552985-df8429e8048b?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Rites of Passage</span>
+            <h4>Marriage, Birth &amp; Death Traditions</h4>
+            <p>Across all five nations, marriage is a communal, spiritual, and economic event far larger than two individuals. Elaborate ceremonies, bride gifts, and days-long celebrations reflect the social weight these transitions carry.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=400&q=60"
+            alt="Hierarchy"
+            onerror="this.src='https://images.unsplash.com/photo-1563289142-1df63d8e1d32?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Social Structure</span>
+            <h4>Hierarchy, Status &amp; Deference</h4>
+            <p>Social hierarchy is expressed through language (Javanese speech levels, Malay honorifics), seating, gift-giving protocols, and in literature through the treatment of royalty, warriors, and commoners across all traditions.</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img"
+            src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=400&q=60"
+            alt="Gender Roles"
+            onerror="this.src='https://images.unsplash.com/photo-1558618047-f4e7d4a4d6ce?w=400&q=60'">
+          <div class="card-body">
+            <span class="card-tag">Gender &amp; Society</span>
+            <h4>Gender Roles in Literature &amp; Life</h4>
+            <p>From fierce Malay warrior epics to the matrilineal Minangkabau of Indonesia and Singapore's contemporary women writers — literary archetypes reflect and increasingly challenge gender roles across ASEAN societies.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       THEN VS NOW PAGE
+  ══════════════════════════════════════════ -->
+  <section id="thennow" class="page">
+    <div style="max-width:1100px; margin:2rem auto;">
+      <div class="parchment">
+        <span class="corner-ornament tl">❧</span><span class="corner-ornament tr">❧</span>
+        <span class="corner-ornament bl">❧</span><span class="corner-ornament br">❧</span>
+        <div class="parchment-inner">
+          <h2 class="section-title">Cultural Evolution: Then vs Now</h2>
+          <p class="section-subtitle">How Modernization Has Transformed ASEAN Life &amp; Literature</p>
+          <div class="ornate-divider">❦</div>
+          <p class="topic-intro">The ASEAN of the 21st century is radically different from that of a hundred years ago — yet ancient values persist, adapt, and find new expression in literature, art, and daily life.</p>
+        </div>
+      </div>
+
+      <div style="padding: 2rem;">
+        <div class="then-now-grid">
+          <div class="then-box">
+            <h4>📜 Then — Traditional Storytelling</h4>
+            <p>Stories were told by griots, monks, and village elders. The storyteller gathered communities at festival time. Knowledge was preserved in memory, palm-leaf manuscripts, and the living voices of professional bards.</p>
+          </div>
+          <div class="now-box">
+            <h4>💻 Now — Digital Narratives</h4>
+            <p>ASEAN authors publish to global audiences via social media and international publishers. Indonesian and Malaysian digital fiction platforms reach millions. Indigenous languages find new life in digital archives and YouTube channels.</p>
+          </div>
+
+          <div class="then-box">
+            <h4>🎭 Then — Classical Performance</h4>
+            <p>Royal courts maintained troupes of classical dancers, shadow puppeteers, and musicians. Performances were ritual acts — connecting mortal communities to divine realms, not entertainment for casual audiences.</p>
+          </div>
+          <div class="now-box">
+            <h4>🎬 Now — Film &amp; Pop Culture</h4>
+            <p>Indonesian horror cinema, Malaysian webtoons, Cambodian documentary film, Singaporean theatre — ASEAN creative industries are growing forces. Traditional stories are reimagined through anime, streaming platforms, and graphic novels.</p>
+          </div>
+
+          <div class="then-box">
+            <h4>🌿 Then — Agricultural Communities</h4>
+            <p>Villages were organized around the rice cycle. Planting and harvest songs, rain prayers, and fertility rituals shaped the literary and musical calendar of communities from the Mekong Delta to the Malay Peninsula.</p>
+          </div>
+          <div class="now-box">
+            <h4>🏙️ Now — Urban Migration &amp; Identity</h4>
+            <p>Rapid urbanization has created a "third culture" generation in Kuala Lumpur, Jakarta, Singapore, and Phnom Penh — neither fully traditional nor wholly modern. Literature increasingly explores the anxiety of belonging and cultural loss.</p>
+          </div>
+
+          <div class="then-box">
+            <h4>📖 Then — Manuscripts &amp; Colonial Print</h4>
+            <p>Before mass literacy, literature lived in palm-leaf manuscripts, bamboo scrolls, and stone temple inscriptions. Colonial-era printing presses democratized reading but often in foreign languages that excluded most of the population.</p>
+          </div>
+          <div class="now-box">
+            <h4>📱 Now — Social Media Literature</h4>
+            <p>Instagram poetry, Twitter fiction, and TikTok storytelling have created new generations of writers across ASEAN — often code-switching between English and vernacular languages in a single poem or post.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       COMPARISON MODAL
+  ══════════════════════════════════════════ -->
+  <div id="compareModal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="compareTitle">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="compareTitle">⚔ Cultural Comparison</h3>
+        <button class="modal-close" onclick="closeModal()" aria-label="Close comparison">✕</button>
+      </div>
+      <div class="modal-body" id="compareBody">
+        <!-- Injected by main.js → showComparison() -->
+      </div>
+    </div>
   </div>
-</div>
 
-<!-- ══════════════════════════════════════════
-     FACT MODAL
-══════════════════════════════════════════ -->
-<div id="factModal" class="fact-overlay">
-  <div class="fact-panel">
-    <div class="fact-panel-head">
-      <div>
-        <div class="fact-panel-eyebrow" id="factEyebrow">Fun Facts</div>
-        <div class="fact-panel-title"   id="factTitle">…</div>
-      </div>
-      <button class="generic-close" onclick="closeFacts()">✕</button>
-    </div>
-    <div class="fact-panel-body" id="factBody"></div>
-    <div class="fact-panel-foot" id="factFoot"></div>
-  </div>
-</div>
+  <!-- ══════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════ -->
+  <footer>
+    ✦ ASEAN Literature Cultural Heritage Portal ✦ &nbsp;|&nbsp; Academic Study Resource &nbsp;|&nbsp;
+    Cambodia &nbsp;·&nbsp; Laos &nbsp;·&nbsp; Indonesia &nbsp;·&nbsp; Singapore &nbsp;·&nbsp; Malaysia
+  </footer>
 
-<!-- JavaScript (loaded last) -->
-<script src="main.js"></script>
+  <!-- JavaScript (loaded last so DOM is ready) -->
+  <script src="main.js"></script>
 
 </body>
 </html>
