@@ -784,3 +784,7 @@ footer {
   letter-spacing: 0.15em;
   opacity: 0.7;
 }
+
+.red-text {
+  color: #8B1E1E;
+}
