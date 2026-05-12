@@ -453,7 +453,7 @@ function showComparison(idA, idB) {
     </table>
 
     <div class="compare-folktales">
-      <div class="compare-folktales-label">📚 Featured Folktales — Moral Teachings</div>
+      <div class="compare-folktales-label"> <strong>📚 Featured Folktales — Moral Teachings </strong> </div>
       <div class="compare-folktales-grid">
         <div>
           <div class="compare-folktale-title">${a.name}: ${a.literary.folktale.title}</div>
